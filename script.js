@@ -27,11 +27,14 @@ const lista = []
 
 const elemekElerese4 = () => {
     let elem4 = document.querySelectorAll('.lista')[0]
+    let txt = `<ul>`
     for (let i = 0; i < 5; i++) {
         let szam = Math.random() * (30 - 10 + 1) + 10;
         lista.push(Math.floor(szam))
-        elem4.innerHTML += `${lista[i]}`
+        txt += `<li>${lista[i]}</li>`
     }
+    elem4.innerHTML += txt
+    elem4.innerHTML += `</ul>`
     elem4.classList.add('formazott')
 }
 
